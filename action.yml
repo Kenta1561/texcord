@@ -1,0 +1,16 @@
+name: 'texcord'
+description: 'Build and send a PDF file built from LaTeX to a Discord webhook'
+inputs:
+  file:
+    description: 'Path to tex file relative to project root'
+    required: true
+  webhook-url:
+    description: 'Discord webhook url to send PDF file to'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.webhook-url }}
+
