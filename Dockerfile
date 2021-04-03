@@ -1,8 +1,4 @@
-FROM ubuntu:20.04
+FROM kenta1561/ubuntu-texlive:1.0
 COPY entrypoint.sh /
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update && apt-get install -y \
-    curl \
-    texlive-latex-extra
 ENTRYPOINT [ "/entrypoint.sh" ]
 
