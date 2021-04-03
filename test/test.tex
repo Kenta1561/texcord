@@ -1,11 +1,29 @@
 \documentclass[a4paper,12pt]{article}
 
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{blindtext}
+\usepackage[style=apa,backend=biber,hyperref=true,natbib=true,language=ngerman]{biblatex}
+
+\bibliography{sources}
+
 \title{My document}
 \author{Kenta Kariya}
 
 \begin{document}
 
-Hello world!
-Trigger build
+\blindtext
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{images/mountains}
+    \centering
+    \caption{Mountains - Photo by v2osk on Unsplash}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\footcite{ref:mountain}
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 \end{document}
