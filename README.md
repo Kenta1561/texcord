@@ -1,5 +1,6 @@
 # texcord
 GitHub Actions workflow to build and send a PDF file built from LaTeX to a Discord webhook.
+Requires [actions/checkout](https://github.com/actions/checkout).
 
 ## :pencil2: Input
 All inputs are required to run the workflow.
