@@ -1,0 +1,23 @@
+# This is a basic workflow to help you get started with Actions
+
+name: texcord-test
+
+# Controls when the action will run. 
+on: [push]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  texcord_job:
+    runs-on: ubuntu-latest
+    name: texcord_job
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: texcord
+        uses: ./ # Uses an action in the root directory
+        id: texcord
+        with:
+          file: test/test.tex
+          webhook-url: ${{ secrets.DISCORD_WEBHOOK_URL }}
